@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #333;
+  background: #2a2e32;
   font-family: "Poppins";
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
@@ -34,16 +34,34 @@ header .container {
   justify-content: space-between;
 }
 
+header h1 {
+  color: #fff;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+
+header h1:hover {
+  color:#fff;
+  padding: 6px 10px;
+}
+
 header a {
   color: #fff;
   text-decoration: none;
-  padding: 0px 10px;
+  padding: 6px 10px;
+  margin-right: 10px;
 }
 
-/* remove hover effect on mobile */
-header a:hover {
-  color: #fff;
-
+header .homeauth a:hover {
+  background: #fff;
+  color: #000;
+  border: 2px solid #fff;
+  padding: 6px 8.5px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: 0 0 10px #fff;
 }
 
 .pages {
@@ -93,12 +111,24 @@ video {
   font-size: 1em;
 }
 
+.welcome button:hover {
+  background: #fff;
+  color: #000;
+  border: 2px solid #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: 0 0 10px #fff;
+}
+
 .mission {
   display: flex;
   padding: 30px 100px;
   flex-direction: column;
   background: #eee;
-  color: #333;
+  color: #2a2e32;
 }
 
 .houses {
@@ -106,7 +136,7 @@ video {
   display: flex;
   flex-direction: column;
   background: #eee;
-  color: #333;
+  color: #2a2e32;
 }
 
 .houses h1 {
@@ -121,7 +151,11 @@ video {
 .testimonials {
   padding: 20px 100px;
   background: #eee;
-  color: #333;
+  color: #444;
+}
+
+.testimonials h1 {
+  text-align: center;
 }
 
 div.error {
@@ -167,17 +201,20 @@ nav button {
 /* auth forms */
 label,
 input {
+  margin: 5px 0px 10px 0px;
   display: block;
 }
 
 input {
   padding: 10px;
-  margin-top: 20px;
-  margin-bottom: 40px;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
 form button {
@@ -202,8 +239,19 @@ form button:hover {
   height: 100vh;
 }
 
+.auth h3 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth p {
+  text-align: center;
+  margin: 10px;
+}
+
 .authlabel {
-  margin: 10px 0px 3px 0px;
+  margin: 20px 0px 3px 6px;
 }
 
 form.signup,
@@ -213,4 +261,35 @@ form.login {
   padding: 20px;
   background: #fff;
   border-radius: 10px;
+}
+
+.text-white {
+  font-family: 'Poppins';
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+footer a:hover, footer a:focus {
+  text-decoration: none;
+}
+
+footer .form-control {
+  background: #212529;
+  border-color: #545454;
+}
+
+footer .form-control:focus {
+  background: #212529;
+}
+
+footer {
+  background: #212529;
 }

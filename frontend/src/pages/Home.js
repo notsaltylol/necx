@@ -1,7 +1,14 @@
+import React from 'react';
 import DisplayCard from '../components/DisplayCard';
-import Testimonials from '../components/Testimonials';
+import Testimony from '../components/Testimony';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 const Home = () => {
+
+  const scrollToHouses = () => {
+    document.getElementById('houses').scrollIntoView({behavior: 'smooth'});
+  }
 
   return (
     <div className='Home'>
@@ -10,7 +17,7 @@ const Home = () => {
         <video src="house.mp4" autoPlay loop muted />
         <div className="welcomeContent">
           <h1>Welcome to House</h1>
-          <button onClick="document.getElementById('houses').scrollIntoView();"> Get Started </button>
+          <button onClick={scrollToHouses}> Get Started </button>
         </div>
       </div>
 
@@ -80,7 +87,18 @@ const Home = () => {
       </div>
 
       <div className="testimonials">
-        <Testimonials/>
+        <h1>Testimonials</h1>
+        <Carousel 
+          autoPlay={true} 
+          infiniteLoop={true} 
+          interval={2000} 
+          showArrows={true}
+          centerMode={true}
+          centerSlidePercentage={60}>
+          <Testimony stars={3.5} author={"John Smith"} text={"Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}/>
+          <Testimony stars={4.5} author={"Maya Stone"} text={"Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}/>
+          <Testimony stars={5} author={"Leon Kwan"} text={" Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}/>
+        </Carousel>
       </div>
     </div>
   )

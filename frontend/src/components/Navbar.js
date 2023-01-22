@@ -26,10 +26,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header style={{backgroundColor: useLocation().pathname === "/"?"transparent":"#333"}}>
-      <div className="container" style={{"backgroundColor":`rgb(33,33,33,${scrollPosition/800})`}}>
+    <header>
+      <div className="container">
         <Link to="/">
-          <h1>House</h1>
+          <h1>HOUSE</h1>
         </Link>
         <nav>
           {user && (
@@ -39,7 +39,7 @@ const Navbar = () => {
             </div>
           )}
           {!user && (
-            <div>
+            <div className='homeauth'>
               <Link to="/login">Login</Link>
               <Link to="/signup">Signup</Link>
             </div>

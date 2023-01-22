@@ -19,18 +19,21 @@ const Signup = () => {
         
         <label className="authlabel">Email:</label>
         <input 
-          type="email" 
+          type="email"
+          // placeholder="example@house.com"
           onChange={(e) => setEmail(e.target.value)} 
           value={email} 
         />
         <label className="authlabel">Password:</label>
         <input 
-          type="password" 
+          type="password"
+          // placeholder="password" 
           onChange={(e) => setPassword(e.target.value)} 
           value={password} 
         />
 
         <button disabled={isLoading}>Sign up</button>
+        <p>Already have an account? <a href="/login">Login</a></p>
         {error && <div className="error">{error}</div>}
       </form>
     </div>

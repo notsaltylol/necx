@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './DisplayCard.css';
+import './DisplayCard.scss';
 
 const DisplayCard = ({ image, title, text }) => {
 

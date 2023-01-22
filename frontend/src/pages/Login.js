@@ -15,24 +15,26 @@ const Login = () => {
   return (
     <div className="auth">
       <form className="login" onSubmit={handleSubmit}>
-        <h3>Log In</h3>
-        
+        <h3>Login</h3>
         <label className="authlabel">Email:</label>
         <input 
-          type="email" 
+          type="email"
+          // placeholder="example@house.com"
           onChange={(e) => setEmail(e.target.value)} 
           value={email} 
         />
         <label className="authlabel">Password:</label>
         <input 
-          type="password" 
+          type="password"
+          // placeholder="password"
           onChange={(e) => setPassword(e.target.value)} 
           value={password} 
         />
-
         <button disabled={isLoading}>Log in</button>
+        <p>Don't have an account? <a href="/login">Sign Up</a></p>
         {error && <div className="error">{error}</div>}
       </form>
+      
     </div>
     
   )
